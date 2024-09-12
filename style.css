@@ -1,0 +1,263 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    min-height: 100dvh;
+    height: 100%;
+    min-width: 100%;
+    background-color: rgb(245, 245, 245);
+    color: rgb(218, 218, 218);
+  }
+html {
+  scroll-behavior: smooth;
+}
+a {
+  all: unset;
+}
+button{
+  all: unset;
+  cursor: pointer;
+}
+/* Header */
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  background-color: rgb(38, 38, 38);
+  color: rgb(218, 218, 218);
+  flex-direction: row;
+  max-height: 5rem;
+  z-index: 2;
+}
+header div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header div i{
+  font-size: 34px;
+  color: rgb(255, 195, 43);
+  transition: 0.2s;
+}
+header div i:hover{
+  scale: 1.1;
+}
+header h1{
+  font-size: 29px;
+  font-style: italic;
+}
+nav ul {
+  display: flex;
+  gap: 3.5rem;
+  list-style: none;
+  margin: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+header ul li {
+  transition: 0.2s;
+  cursor: pointer;
+  font-size: 15px;
+}
+header ul li:hover {
+  transform: scale(1.14);
+}
+header ul li:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 107%;
+  left: 0;
+  transform: scaleX(0);
+  background-color: rgba(245, 193, 62, 0.959);
+}
+li:hover::after {
+  transform: scaleX(1);
+}
+.wts-button{
+  border: solid transparent;
+  padding: 0.6rem;
+  background-color: rgb(237, 170, 1);
+  font-weight: 600;
+  font-size: 15.5px;
+  border-radius: 30px;
+  transition: 0.2s;
+  min-width: 11rem;
+}
+.wts-button:hover{
+  background-color: rgba(245, 193, 62, 0.959);
+  scale: 1.05;
+}
+/* Home */
+#home img{
+  filter: contrast(1.2);
+  width: 100%;
+}
+/* Services */
+#services{
+  box-shadow: 0px 0px 100rem rgb(0, 0, 0);
+  background-color: rgb(166, 165, 165);
+}
+.services-modals{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.services-modals div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 27%;
+  border: solid rgb(104, 104, 104) 5px;
+  background-color: rgb(38, 38, 38);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: 0.2s;
+  margin: 1.3rem 0;
+}
+.services-modals div:hover{
+  scale: 1.03;
+}
+.services-modals div i{
+  font-size: 1.4rem;
+  color: rgb(237, 170, 1);
+  border-radius: 50%;
+  padding: 0.7rem 0 0.1rem 0;
+  transition: 0.4s;
+}
+.services-modals div i:hover{
+  scale: 1.1;
+}
+.services-modals div h1{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 1.4rem 0 1.4rem 0;
+  word-wrap: break-word;
+}
+.services-modals div p{
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-width: 60%;
+  font-size: 1.1rem;
+}
+/* Budget */
+#budget{
+  background-color: rgb(47, 47, 47);
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2.5rem;
+  border-bottom: solid 6px rgb(237, 170, 1);
+}
+#budget p{
+  font-size: 19px;
+  margin-top: 2rem;
+}
+#budget h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(218, 218, 218);
+  font-family: "Righteous", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+}
+#budget button{
+  margin-top: 2rem;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 30px;
+  background-color: rgb(237, 170, 1);
+  transition: 0.2s;
+}
+#budget button a{
+  color: rgb(218, 218, 218);
+}
+#budget button:hover{
+  background-color: rgba(245, 193, 62, 0.959);
+  scale: 1.05;
+}
+/* Rodapé */
+footer{
+  background-color: rgb(166, 165, 165);
+}
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 3rem 0;
+}
+.contact div{
+  padding: 0 2rem;
+  color: rgb(36, 36, 36);
+  font-size: 1.07rem;
+}
+.contact > a i{
+  color: rgb(36, 36, 36);
+  font-size: 1.3rem;
+}
+.contact div p a{
+  all: unset;
+  cursor: pointer;
+}
+.contact div p a:hover{
+  text-decoration: underline;
+}
+.contact > a{
+  cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px){
+  body{
+    width: 100%;
+  }
+  nav ul{
+    display: none;
+  }
+  .wts-button{
+    padding: 0.6rem 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    min-width: 1rem;
+  }
+  .services-modals{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .services-modals div{
+    width: 80%;
+  }
+  .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .bruh{
+    padding-top: 2rem;
+  }
+  #budget p{
+    width: 80%;
+  }
+}
